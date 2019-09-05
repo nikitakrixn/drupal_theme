@@ -1,0 +1,4 @@
+name: my-theme-laveg
+recipe: drupal8
+config:
+  webroot: .
