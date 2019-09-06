@@ -1,0 +1,25 @@
+name: Laveg
+type: theme
+base theme: classy
+Description: "A custom & responsive Drupal 8 Theme for laveg.de"
+package: custom
+core: 8.x
+
+libraries:
+  - laveg/global-css
+  - laveg/global-js
+  - core/normalize
+stylesheets-remove:
+  - core/modules/system/css/system.module.css
+  - core/modules/system/css/system.theme.css
+  - core/modules/views/css/views.module.css
+
+regions:
+  headline: 'headline'
+  header: 'Header'
+  navigation: 'Navigation'
+  left_sidebar: 'Left Sidebar'
+  main_content: 'Content'
+  footer: 'Footer'
+  page_top: 'Page Top'
+  page_bottom: 'Page Bottom'

@@ -1,0 +1,11 @@
+global-css:
+  version: 1.x
+  css:
+    theme:
+      css/style.css: {}
+      '//fonts.googleapis.com/css?family=Open+Sans:300,400': { external: true }
+      '//fonts.googleapis.com/css?family=Raleway:100,300,400,500': { external: true }
+  global-js:
+    js/common.js: {}
+  dependencies:
+    - core/jquery
