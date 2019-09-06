@@ -15,11 +15,11 @@ stylesheets-remove:
   - core/modules/views/css/views.module.css
 
 regions:
-  headline: 'headline'
   header: 'Header'
+  logo: 'Logo'
   navigation: 'Navigation'
-  left_sidebar: 'Left Sidebar'
   main_content: 'Content'
+  slogan: 'Slogan'
   footer: 'Footer'
   page_top: 'Page Top'
   page_bottom: 'Page Bottom'
