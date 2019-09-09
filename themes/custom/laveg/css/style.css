@@ -491,8 +491,6 @@ input[type="radio"]:checked:before {
 }
 
 .services-block {
-    display: flex;
-    width: 272px;
     text-align: left;
     margin-right: 92px;
     float: left;
@@ -508,9 +506,13 @@ input[type="radio"]:checked:before {
 }
 
 .services-block li {
-   list-style: none;
-   border-bottom: 1px #d1d1d1 solid;
-   padding: 10px 0;
+  width: 340px;
+  display: inline-block;
+  list-style: none;
+  border-bottom: 1px #d1d1d1 solid;
+  padding: 10px 0;
+  margin-right: 92px;
+  float: left;
 }
 
 .services-block li:last-child {
@@ -592,6 +594,7 @@ input[type="radio"]:checked:before {
     color: #ffffff;
     font-size: 27px;
     font-weight: 300;
+    line-height: 21px;
     line-height: 21px;
     text-align: left;
     text-decoration: none;

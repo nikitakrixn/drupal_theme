@@ -2,6 +2,9 @@
 
 function laveg_preprocess_page(&$variables)
 {
+  $config = \Drupal::config('system.site');
+  $variables['site_name'] = $config->get('name');
+  $variables['site_slogan'] = $config->get('slogan');
   $variables['show_contacts'] = theme_get_setting('show_contacts');
   $variables['address'] = theme_get_setting('address');
   $variables['email'] = theme_get_setting('email');

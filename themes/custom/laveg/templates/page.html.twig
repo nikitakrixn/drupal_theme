@@ -44,6 +44,7 @@
 
       {{ page.navigation }}
 
+      {% if is_front %}
       <div class="alert">
         <div class="alert-header">
           <div class="alert-header-title">
@@ -78,12 +79,16 @@
           </div>
         </div>
       </div>
+      {% endif %}
     </div>
   </div>
 
-  <div class="banner"></div>
+  {% if is_front %}
+    <div class="banner"></div>
+  {% endif %}
 </section>
 
+{% if is_front %}
 <section class="second-section">
   <div class="page-welcome">
     <div class="container">
@@ -91,6 +96,7 @@
     </div>
   </div>
 </section>
+{% endif %}
 
 <section class="third-section">
   <div class="page-grid">
@@ -126,7 +132,7 @@
       <h2>Services</h2>
       {% if page.services %}
           <div class="services-block">
-              {{ page.services | raw }}
+              {{ page.services }}
           </div>
       {% endif %}
 
@@ -149,8 +155,8 @@
 <section class="six-section">
   <div class="page-slogan">
     <p>
-    {% if page.slogan %}
-      {{ page.slogan }}
+    {% if site_slogan %}
+      {{ site_slogan }}
     {% else %}
       "SLOGAN AREA HERE"
     {% endif %}

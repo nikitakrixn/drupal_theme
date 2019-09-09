@@ -26,9 +26,6 @@ regions:
   main_content: 'Content'
 
   services: 'Services'
-
-  slogan: 'Slogan'
-
   #Footer
   footer: 'Footer'
   page_top: 'Page Top'
