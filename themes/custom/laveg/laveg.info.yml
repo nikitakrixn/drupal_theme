@@ -14,12 +14,22 @@ stylesheets-remove:
   - core/modules/system/css/system.theme.css
   - core/modules/views/css/views.module.css
 
+#Regions
 regions:
+
+  #Header
   header: 'Header'
   logo: 'Logo'
   navigation: 'Navigation'
+
+  #Global regions
   main_content: 'Content'
+
+  services: 'Services'
+
   slogan: 'Slogan'
+
+  #Footer
   footer: 'Footer'
   page_top: 'Page Top'
   page_bottom: 'Page Bottom'

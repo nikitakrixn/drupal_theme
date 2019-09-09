@@ -1,0 +1,66 @@
+<?php
+
+function laveg_preprocess_page(&$variables)
+{
+  $variables['show_contacts'] = theme_get_setting('show_contacts');
+  $variables['address'] = theme_get_setting('address');
+  $variables['email'] = theme_get_setting('email');
+  $variables['phone'] = theme_get_setting('phone');
+  $variables['mobile_phone'] = theme_get_setting('mobile_phone');
+}
+/**
+ * Implements hook_preprocess_menu().
+ */
+function laveg_preprocess_menu(&$variables, $hook) {
+  if ($hook == 'menu__main') { // We're doing that for main menu.
+    // Get the current path.
+    $current_path = \Drupal::request()->getRequestUri();
+    $items = $variables['items'];
+    foreach ($items as $key => $item) {
+      // If path is current_path, set active to li.
+      if ($item['url']->toString() == $current_path) {
+        // Add active link.
+        $variables['items'][$key]['attributes']['class'] = 'active';
+      }
+    }
+  }
+}
+
+function laveg_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id = NULL)
+{
+  if (isset($form_id)) {
+    return;
+  }
+  $form['footer_contact'] = array(
+    '#type' => 'details',
+    '#title' => t('Contact Information'),
+    '#open' => TRUE,
+  );
+  // Contact Information
+  $form['footer_contact']['show_contacts'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show Contacts'),
+    '#default_value' => theme_get_setting('show_contacts'),
+    '#description' => t("Show/Hide Contacts"),
+  );
+  $form['footer_contact']['address'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Address'),
+    '#default_value' => theme_get_setting('address'),
+  );
+  $form['footer_contact']['email'] = array(
+    '#type' => 'email',
+    '#title' => t('Email'),
+    '#default_value' => theme_get_setting('email'),
+  );
+  $form['footer_contact']['phone'] = array(
+    '#type' => 'tel',
+    '#title' => t('Telephone'),
+    '#default_value' => theme_get_setting('phone'),
+  );
+  $form['footer_contact']['mobile_phone'] = array(
+    '#type' => 'tel',
+    '#title' => t('Mobile phone'),
+    '#default_value' => theme_get_setting('mobile_phone'),
+  );
+}

@@ -4,8 +4,8 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size:16px;
     line-height: 26px;
-    color: #000000;
-	background: #F8F8FF;
+    color: #ffffff;
+	  background: #F8F8FF;
 }
 a {
     text-decoration: none;
@@ -491,6 +491,7 @@ input[type="radio"]:checked:before {
 }
 
 .services-block {
+    display: flex;
     width: 272px;
     text-align: left;
     margin-right: 92px;
@@ -605,6 +606,7 @@ input[type="radio"]:checked:before {
 .page-slogan {
     text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
+    color: #0f0f0f;
     font-size: 36px;
     font-weight: 100;
     line-height: 21px;
