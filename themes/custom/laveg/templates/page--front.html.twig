@@ -1,0 +1,193 @@
+<section class="first-section">
+  <div class="header">
+    <div class="container">
+      <div class="header-left">
+        <div class="header__logo">
+          {% if page.logo %}
+            {{ page.logo }}
+          {% else %}
+            <a href="/">LOGO HERE</a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="header__call">
+          <a href="tel:03222355753">0322 235 57 53</a>
+          <img src="/{{ directory }}/images/call.png" alt="">
+        </div>
+
+        <hr class="style-one">
+
+        <div class="header-info">
+          <div class="header__time">
+            <p>Mo-Fr von 8-20 Uhr</p>
+            <img src="/{{ directory }}/images/time.png" alt="">
+          </div>
+
+          <div class="header__consultation">
+            <p>Kostenlose Erstberatung</p>
+            <img src="/{{ directory }}/images/consultation.png" alt="">
+          </div>
+
+          <div class="header__nation">
+            <p>Bundesweit tätig</p>
+            <img src="/{{ directory }}/images/nation.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar">
+    <div class="container">
+
+      {{ page.navigation }}
+
+      {% if is_front %}
+      <div class="alert">
+        <div class="alert-header">
+          <div class="alert-header-title">
+            <img src="{{ active_theme_path() }}/images/aler.png" alt="">
+            <p>Jeder zweite Bußgeldbescheid ist fehlerhaft.</p>
+          </div>
+          <div class="alert-header-desc">
+            <p>Akzeptieren Sie niemals einen Bußgeldbescheid ungeprüft. Sprechen Sie zuerst mit uns!</p>
+          </div>
+        </div>
+        <div class="alert-line"></div>
+        <div class="alert-body">
+          <p>Fragen kostet nichts. Schildern Sie uns Ihren Fall völlig unverbindlich. Bitte füllen Sie folgendes Formular aus:</p>
+          <div class="alert-block">
+            <div class="alert-block-1">1</div>
+            <div class="alert-block-line"></div>
+            <div class="alert-block-2">2</div>
+          </div>
+          <div class="alert-form">
+            <h4>1. Was wird Ihnen vorgeworfen?</h4>
+            <form action="">
+              <p><input type="radio" name="form"> Geschwindigkeitsverstoß</p>
+              <p><input type="radio" name="form"> Rotlichtverstoß</p>
+              <p><input type="radio" name="form"> Abstandsverstoß</p>
+              <p><input type="radio" name="form"> Alkohol- / Drogenverstoß</p>
+              <p><input type="radio" name="form"> Parkverstoß</p>
+              <p><input type="radio" name="form"> anderer Tatvorwurf</p>
+              <div class="aleft-form-button">
+                <button>Weiter</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+    <div class="banner"></div>
+
+</section>
+
+{% if page.welcome_area %}
+<section class="second-section">
+  <div class="page-welcome">
+    <div class="container">
+      {{ page.welcome_area }}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="third-section">
+  <div class="page-grid">
+    <div class="container">
+      {{ page.main_content }}
+    </div>
+  </div>
+</section>
+
+<section class="fourth-section">
+  <div class="page-services">
+    <div class="container">
+      {% if page.services %}
+          <div class="services-block">
+              {{ page.services }}
+          </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="fifth-section">
+  <div class="page-about">
+    <div class="container">
+      <div class="about-block">
+        {{ page.info_page }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="six-section">
+  <div class="page-slogan">
+    <p>
+    {% if site_slogan %}
+      {{ site_slogan }}
+    {% else %}
+      "SLOGAN AREA HERE"
+    {% endif %}
+    <p>
+  </div>
+</section>
+
+{% if show_contacts %}
+<section class="seven-section">
+  <div class="contacts">
+    <div class="container">
+      {% if address %}
+      <div class="contacts-block">
+        <img src="/{{ directory }}/images/map.png" alt="">
+        <p>{{ address }}</p>
+      </div>
+      {% endif %}
+
+      {% if phone %}
+      <div class="contacts-block">
+        <img src="/{{ directory }}/images/tel.png" alt="">
+        <p>Phone: <a href="tel:{{ phone }}">{{ phone }}</a></p>
+      </div>
+      {% endif %}
+
+      {% if mobile_phone %}
+      <div class="contacts-block">
+        <img src="/{{ directory }}/images/mobile.png" alt="">
+        <p>Mobile: <a href="tel:{{ mobile_phone }}">{{ mobile_phone }}</a></p>
+      </div>
+      {% endif %}
+
+      {% if email %}
+      <div class="contacts-block">
+        <img src="/{{ directory }}/images/email.png" alt="">
+        <p>E-mail: <a href="mailto: {{ email }}">{{ email }}</a></p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<div class="footer">
+  <div class="container">
+    <div class="footer-block">
+      {% if page.logo %}
+        {{ page.logo }}
+      {% else %}
+        <a href="/">LOGO HERE</a>
+      {% endif %}
+      <p class="copyright">©{{ "now"|date("Y") }} {{ site_name}} | All Right Reserved</p>
+    </div>
+    <div class="footer-block">
+      {{ page.footer }}
+    </div>
+  </div>
+</div>
+

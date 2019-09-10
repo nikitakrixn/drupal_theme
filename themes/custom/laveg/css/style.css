@@ -4,12 +4,13 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size:16px;
     line-height: 26px;
-    color: #ffffff;
+    color: #000000;
 	  background: #F8F8FF;
 }
 a {
     text-decoration: none;
 }
+
 .container {
     width: 1000px;
     margin: auto;
@@ -323,7 +324,7 @@ input[type="radio"]:checked:before {
 
 .banner {
     height: 617px;
-    background: url(../images/bg-banner.png) center;
+    background: url("../images/bg-banner.png") center;
     background-size: cover;
 }
 
@@ -347,25 +348,50 @@ input[type="radio"]:checked:before {
     margin-bottom: 24px;
 }
 
+.page-welcome a:link{
+  font-weight: 500;
+  color: #b5141d;
+}
+.page-welcome a:visited{
+  font-weight: 500;
+  color: #b5141d;
+}
+
 .page-welcome-img {
     position: relative;
     float: left;
 }
 
 .page-welcome-img img {
-    position: relative;
-    margin-left: 4px;
-    z-index: 1;
+  position: relative;
+  width: 340px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.page-welcome-img:hover img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
 }
 
 .page-welcome-img-block {
-    position: absolute;
+    position: relative;
     background-color: #a60912;
     width: 341px;
     height: 52px;
     top: 57px;
 }
-
+.page-welcome-content-img img {
+  position: relative;
+  margin-left: 4px;
+  z-index: 1;
+}
 .page-welcome-content {
     font-family: 'Open Sans';
     color: #65666b;
@@ -378,6 +404,17 @@ input[type="radio"]:checked:before {
     float: right;
     width: 636px;
 }
+.page-content{
+  font-family: 'Open Sans';
+  color: #65666b;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: justify;
+  padding-top: 8px;
+  float:left;
+}
+
 
 .page-grid {
     border: 1px solid #ebebeb;
@@ -398,12 +435,8 @@ input[type="radio"]:checked:before {
 .grid-item {
     width: 272px;
     text-align: center;
-    margin-right: 92px;
+    margin-right: 60px;
     float: left;
-}
-
-.grid-item:last-child {
-    margin-right: 0;
 }
 
 .grid-item h3 {
@@ -686,6 +719,19 @@ input[type="radio"]:checked:before {
     margin: 1px 0 0 0;
 }
 
+.footer-block li{
+  display: inline-block;
+}
+
+.footer-block a{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18.045px;
+  text-align: left;
+  margin: 1px 0 0 0;
+  text-transform: uppercase;
+}
 .footer .copyright {
     font-family: Arial;
     color: #ffffff;
