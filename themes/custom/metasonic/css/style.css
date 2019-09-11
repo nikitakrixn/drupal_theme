@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'Segoe UI';
+    src: url(../fonts/segoe.ttf);
+}
+
+html,body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    color: #717171;
+    font-family: 'Segoe UI';
+    font-size: 24px;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container {
+    width: 1135px;
+    margin: auto;
+}
+
+
+/* HEADER */
+.header{
+    background-color: #ffffff;
+	box-shadow:0 1px 1px #ccc;
+	height: 120px;
+	box-sizing: border-box;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.header-logo{
+    margin-top: 14px;
+    width: 110px;
+    float: left;
+}
+
+.header-right {
+    float: right;
+    width: 365px;
+    margin-top: 34px;
+}
+
+.header-right__link{
+    float: left;
+    display: block;
+    margin-top: 9px;
+    color: #928b8b;
+    font-family: "Segoe UI";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.header-right__link:link{
+    color: #928b8b;
+}
+
+.header-right__link:visited{
+    color: #928b8b;
+}
+
+.header-right__link:hover{
+    text-decoration: none;
+    color:#3a9fff;
+}
+
+.header-menu{
+    width: 1003px;
+    height: 33px;
+    background-color: #7e7e7e;
+    float: right;
+    margin-top: 17px;
+}
+
+.header-nav ul{
+    margin: 0 50px 0 0;
+}
+
+.header-nav li{
+    display: inline;
+    padding-left: 30px;
+}
+
+.header-nav a {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+}
+
+.header-nav a:link{
+    color: #fff;
+}
+
+.header-nav a:visited{
+    color: #fff;
+}
+
+.header-nav a:hover{
+    text-decoration: none;
+    color:#3a9fff;
+}
+
+/* Seatch BAR */
+
+.search-form{
+    float: right;
+    display: flex;
+    border-radius: 4px;
+}
+
+.search-form__input{
+    border: 3px solid #cccccc;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    outline: none;
+    font-family: 'Segoe UI';
+    color: #928b8b;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.14px;
+    line-height: 18px;
+    text-align: left;
+}
+
+.search-form__input:focus{
+    color:#3a9fff;
+}
+
+.search-form__button{
+    width: 40px;
+    height: 36px;
+    border: 1px solid #969696;
+    background-color: #969696;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    background-image: url(../images/search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5px  6px  7px  5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Default banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../images/banner.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.banner:before{
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+	opacity: .6;
+}
+
+/* GRID ITEM */
+.grid-item {
+    width: 364px;
+    height: 308px;
+    background-color: #ffffff;
+    text-align: center;
+    margin-right: 92px;
+    float: left;
+}
+.grid-item:last-child {
+    margin-right: 0;
+}
+
+.grid-item h3 {
+    font-family: Raleway;
+    color: #b5141d;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 25px 0 22px 0;
+}
+
+.grid-item p {
+    font-family: 'Open Sans';
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: center;
+    margin: 0 0 23px 0;
+}
+
+.grid-item a {
+    font-family: 'Open Sans';
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    background: #b5141d;
+    text-transform: uppercase;
+    padding: 13px 19px;
+    border-radius: 5px;
+}
+
+.grid-item a:hover {
+    opacity: 0.8;
+    transition: all 0.25s ease-out;
+}
+
+.grid-icon{
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0 auto 36px;
+    height: 52px;
+    width: 52px;
+    border: 2px solid #202020;
+    border-radius: 5px;
+    background-position: center;
+    background-color: #202020;
+}
+
+
