@@ -6,8 +6,6 @@
 html,body{
     padding: 0;
     margin: 0;
-    width: 100%;
-    height: 100%;
     background-color: #f4f4f4;
     color: #717171;
     font-family: 'Segoe UI';
@@ -24,33 +22,26 @@ a{
     margin: auto;
 }
 
-
 /* HEADER */
 .header{
     background-color: #ffffff;
-	box-shadow:0 1px 1px #ccc;
-	height: 120px;
-	box-sizing: border-box;
-	margin-left: auto;
-    margin-right: auto;
+	  box-shadow:0 1px 1px #ccc;
+	  height: 120px;
+    width: 100%;
+	  box-sizing: border-box;
 }
 
-.header-logo{
+#block-metasonic-sitebranding-2{
     margin-top: 14px;
     width: 110px;
     float: left;
 }
 
-.header-right {
+#block-useraccountmenu{
     float: right;
-    width: 365px;
-    margin-top: 34px;
-}
-
-.header-right__link{
-    float: left;
     display: block;
-    margin-top: 9px;
+    margin-top: 20px;
+    margin-right: 24px;
     color: #928b8b;
     font-family: "Segoe UI";
     font-size: 14px;
@@ -59,37 +50,42 @@ a{
     text-transform: uppercase;
 }
 
-.header-right__link:link{
+#block-useraccountmenu li{
+  display: inline-block;
+  padding-left: 20px;
+}
+
+#block-useraccountmenu a:link{
     color: #928b8b;
 }
 
-.header-right__link:visited{
+#block-useraccountmenu a:visited{
     color: #928b8b;
 }
 
-.header-right__link:hover{
+#block-useraccountmenu a:hover{
     text-decoration: none;
     color:#3a9fff;
 }
 
-.header-menu{
+.menu--main{
     width: 1003px;
     height: 33px;
     background-color: #7e7e7e;
     float: right;
-    margin-top: 17px;
+    margin-top: 2px;
 }
 
-.header-nav ul{
-    margin: 0 50px 0 0;
+.menu--main ul{
+    margin: 0;
 }
 
-.header-nav li{
+.menu--main li{
     display: inline;
-    padding-left: 30px;
+    padding-left: 40px;
 }
 
-.header-nav a {
+.menu--main a {
     color: #fff;
     font-size: 17px;
     font-weight: 400;
@@ -97,28 +93,27 @@ a{
     text-align: left;
 }
 
-.header-nav a:link{
+.menu--main a:link{
     color: #fff;
 }
 
-.header-nav a:visited{
+.menu--main a:visited{
     color: #fff;
 }
 
-.header-nav a:hover{
+.menu--main a:hover{
     text-decoration: none;
     color:#3a9fff;
 }
 
-/* Seatch BAR */
+/* Search BAR */
 
-.search-form{
+#search-block-form{
     float: right;
     display: flex;
-    border-radius: 4px;
 }
 
-.search-form__input{
+#search-block-form input[type="search"]{
     border: 3px solid #cccccc;
     border-right: none;
     padding: 5px;
@@ -133,24 +128,24 @@ a{
     text-align: left;
 }
 
-.search-form__input:focus{
+#search-block-form input[type="search"]:focus{
     color:#3a9fff;
 }
 
-.search-form__button{
-    width: 40px;
+#search-block-form input[type="submit"]{
+    margin-top: 26px;
     height: 36px;
     border: 1px solid #969696;
     background-color: #969696;
     text-align: center;
     color: #fff;
     border-radius: 0 5px 5px 0;
-    background-image: url(../images/search.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 5px  6px  7px  5px;
     cursor: pointer;
     font-size: 20px;
+}
+
+#search-block-form input[type="submit"]:before{
+  content:'Su';
 }
 
 /* Default banner */
@@ -237,4 +232,90 @@ a{
     background-color: #202020;
 }
 
+/* FOOTER */
+
+.footer {
+  background: #343434;
+  position: relative;
+}
+
+.footer nav{
+  width: 150px;
+  line-height: 27px;
+  text-transform: uppercase;
+  padding-top: 20px;
+  margin-right: 50px;
+  display: inline-table;
+}
+
+.footer h2{
+  color:#fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.footer li{
+  font-size: 10px;
+  text-align: left;
+  margin-right: 20px;
+}
+
+.footer a{
+  color: #858585;
+}
+
+.footer a:link{
+  color:#858585;
+}
+
+.footer a:visited{
+  color:#858585;
+}
+
+.footer a:hover{
+  color:#3a9fff;
+}
+
+nav.menu--footer{
+  width: 100%;
+  color: #bebebe;
+  font-weight: 700;
+  line-height: 27px;
+  text-transform: uppercase;
+}
+
+nav.menu--footer ul{
+  padding: 20px 0 0 0;
+  margin: 0;
+}
+
+nav.menu--footer li{
+  display: inline-block;
+  list-style: none;
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+nav.menu--footer li:before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 4px solid #fcaf1e;
+  border-right: 4px solid #fcaf1e;
+  transform: rotate(45deg);
+  margin-right: 3px;
+}
+
+nav.menu--footer a:link{
+  color: #bebebe;
+}
+
+nav.menu--footer a:visited{
+  color: #bebebe;
+}
+
+nav.menu--footer a:hover{
+  color:#3a9fff;
+}
 
