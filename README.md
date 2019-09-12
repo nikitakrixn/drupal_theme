@@ -1,4 +1,4 @@
-# Theme-1-Laveg
+# Theme-2-Metasonic
 
 ## Информация
 > Тема для сайта drupal8 laveg.de
