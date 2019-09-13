@@ -14,5 +14,6 @@ libraries:
 #Regions
 regions:
   header: Header
+  slideshow: 'SlideShow'
   content: Content
   footer: Footer
