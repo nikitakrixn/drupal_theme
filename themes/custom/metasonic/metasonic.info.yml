@@ -1,0 +1,19 @@
+# metasonic.
+name: Metasonic
+type: theme
+base theme: classy
+description: 'A custom & responsive Drupal 8 Theme for Metasonic'
+package: Core
+version: VERSION
+core: 8.x
+libraries:
+  - metasonic/global-css
+  - metasonic/global-js
+  - core/normalize
+
+#Regions
+regions:
+  header: Header
+  slideshow: 'SlideShow'
+  content: Content
+  footer: Footer

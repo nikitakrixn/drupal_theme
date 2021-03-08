@@ -387,6 +387,11 @@ input[type="radio"]:checked:before {
     height: 52px;
     top: 57px;
 }
+.page-welcome-content-img {
+  position: relative;
+  float: left;
+}
+
 .page-welcome-content-img img {
   position: relative;
   margin-left: 4px;
